@@ -36,7 +36,6 @@ class App {
 
   run = () => {
     Car.list.forEach((car) => {
-      console.log(car)
       const node = document.createElement("div");
       node.classList.add('col-md-4')
       node.innerHTML = car.render();
@@ -46,12 +45,12 @@ class App {
 
   load = async () => {
 
-    localStorage.removeItem('CARS')
+    // localStorage.removeItem('CARS')
 
-    await Binar.listCars()
+    let cars = await Binar.listCars(this.filterCars)
 
-    let cars = JSON.parse(localStorage.getItem('CARS'))
-    cars = cars.filter(this.filterCars)
+    // let cars = JSON.parse(localStorage.getItem('CARS'))
+    // cars = cars.filter(this.filterCars)
 
     Car.init(cars);
   }
