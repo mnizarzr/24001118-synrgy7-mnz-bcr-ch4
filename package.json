@@ -3,10 +3,20 @@
   "version": "1.0.0",
   "description": "Project HTTP Server dan DOM",
   "main": "server/index.js",
-  "author": "Fikri Rahmat Nurhidayat <fnurhidayat@binar.co.id>",
-  "license": "MIT",
+  "contributors": [
+    "Fikri Rahmat Nurhidayat <fnurhidayat@binar.co.id>",
+    "Muhammad Nizar Zulmi Rohmatulloh <mnizarzr@gmail.com>"
+  ],
   "private": false,
   "scripts": {
-    "start": "node server/index.js"
+    "dev:watch": "PORT=4000 nodemon server/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "server/"
+    ]
   }
 }

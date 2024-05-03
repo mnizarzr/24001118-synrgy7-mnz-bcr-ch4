@@ -11,9 +11,11 @@ class Binar {
       const timeAt = new Date();
       const mutator = getRandomInt(1000000, 100000000);
       const availableAt = new Date(timeAt.getTime() + (isPositive ? mutator : -1 * mutator))
+      const withDriver = Math.random() >= 0.5;
 
       return {
         ...car,
+        withDriver,
         availableAt,
       };
     })
