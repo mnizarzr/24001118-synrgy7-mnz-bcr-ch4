@@ -135,6 +135,7 @@ footer {
 }
 
 #car-filter {
+  margin: 0;
   width: 80%;
   height: 100px;
   position: relative;
